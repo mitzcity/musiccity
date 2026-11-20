@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Conectar archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+   <!-- Menu lateral -->
+    <aside class="menu">
+        <h1> <img src="musica.png" width="150" heigth="150">music city</h1>
+
+        <nav>
+            <a href="INDEX.HTML">🏠 INICIÓ</a>
+            <a href="junior.html">JUNIOR H</a>
+            <a href="kevin.html">KEVIN KAARL</a>
+            <a href="zoe.html">ZOE</a>
+            <a href="log.html">JOSEA JOG</a>
+            <a href="under.html">JUNDER SIDE 821</a>
+            <a href="formulario.html">SUBCRIPCION</a>
+        </nav>
+</aside>
+    <div class="contenedor">
+        <h1>Formulario de Registro</h1>
+
+        <form id="formulario" novalidate>
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" maxlength="100"
+                    placeholder="Escribe tu nombre">
+                <small class="mensaje" id="errorNombre"></small>
+            </div>
+
+            <div class="campo">
+                <label for="paterno">Apellido paterno:</label>
+                <input type="text" id="paterno" maxlength="100"
+                    placeholder="Escribe tu apellido paterno">
+                <small class="mensaje" id="errorPaterno"></small>
+            </div>
+
+            <div class="campo">
+                <label for="materno">Apellido materno:</label>
+                <input type="text" id="materno" maxlength="100"
+                    placeholder="Escribe tu apellido materno">
+                <small class="mensaje" id="errorMaterno"></small>
+            </div>
+
+            <div class="campo">
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" maxlength="3"
+                    inputmode="numeric" placeholder="Ejemplo: 25">
+                <small class="mensaje" id="errorEdad"></small>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Numero de Cuenta:</label>
+                <input type="text" id="telefono" maxlength="16" minlength="16" 
+                    inputmode="numeric" placeholder="16 dígitos"
+                    oninput="this.value=this.value.replace(/[^0-9]/g, '').slice(0,16)"">
+                <small class="mensaje" id="errorTelefono"></small>
+            </div>
+
+             <div class="campo">
+                <label for="fecha">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha"> 
+                <small class="mensaje" id="errorCuenta"></small>
+            </div>
+
+
+            <div class="campo">
+                <label for="gmail">Correo electrónico:</label>
+                <input type="text" id="gmail"
+                    placeholder="ejemplo@gmail.com">
+                <small class="mensaje" id="errorGmail"></small>
+            </div>
+
+            <button type="submit">VALIDAR</button>
+
+
+            <div id="resultado"></div>
+
+        </form>
+    </div>
+        <script src="validaciones.js"></script>
+    
+</body>
+</html>

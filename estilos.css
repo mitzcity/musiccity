@@ -1,0 +1,263 @@
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imagen.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #121212;
+    color:white; 
+}
+
+/* Menu lateral */
+.menu {
+    width: 230px;
+    height: 100vh;
+    background-color: #000000;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu h1 {
+    color: #1DB954;
+    margin-bottom: 35px;
+}
+
+.menu nav a,
+.playlists a {
+    display: block;
+    color: #b3b3b3;
+    text-decoration: none;
+    padding: 12px 5px;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.playlists {
+    margin-top: 40px;
+}
+
+.playlists h3 {
+    margin-bottom: 10px;
+}
+
+/* Contenido principal */
+.contenido {
+    margin-left: 230px;
+    padding: 30px;
+    width: calc(100% - 230px);
+    margin-bottom: 110px;
+}
+
+header {
+    background: linear-gradient(120deg, #1DB954, #164B36);
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+}
+
+header h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Albumes */
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.albumes {
+    display: flex !important;
+    flex-direction: row !important; 
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    
+}
+
+.album {
+    background-color: #181818;
+    padding: 10px !important;
+    border-radius: 10px;
+    width: 135px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    transition: 0.3s;
+}
+
+.album:hover {
+    background-color: #282828;
+    transform: scale(1.03);
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.album h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.album p {
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+/* Lista de canciones */
+.cancion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-bottom: 1px solid #282828;
+}
+
+.cancion:hover {
+    background-color: #282828;
+}
+
+.cancion div {
+    flex: 1;
+}
+
+.cancion h3 {
+    font-size: 15px;
+}
+
+.cancion p {
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+/* Reproductor inferior */
+.reproductor {
+    background-color: #181818;
+    border-top: 1px solid #333;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.info-cancion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 25%;
+}
+
+.info-cancion h4 {
+    font-size: 14px;
+}
+
+.info-cancion p {
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.controles {
+    width: 45%;
+    text-align: center;
+}
+
+.botones button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.botones .play {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 8px 12px;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.progreso {
+    background-color: #555;
+    height: 5px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.avance {
+    background-color: #1DB954;
+    width: 30%;
+    height: 5px;
+    border-radius: 5px;
+}
+
+/* Volumen */
+.volumen {
+    width: 20%;
+    text-align: right;
+    color: #b3b3b3;
+}
+
+/* Adaptacion para celulares */
+@media (max-width: 700px) {
+
+    .menu {
+        width: 150px;
+    }
+
+    .contenido {
+        margin-left: 150px;
+        width: calc(100% - 150px);
+        padding: 15px;
+    }
+
+    .album {
+        width: 140px;
+    }
+
+    .reproductor {
+        padding: 10px;
+    }
+
+    .volumen {
+        display: none;
+    }
+
+    .info-cancion {
+        width: 30%;
+    }
+
+    .controles {
+        width: 65%;
+    }
+}
